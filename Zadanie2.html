@@ -3,15 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<script>
-			var ageNumber = prompt('Привет! Сколько тебе лет?', );
-			console.log(ageNumber, typeof ageNumber);
+			var ageNumber = prompt('Привет! Сколько тебе лет?');
+			console.log(typeof ageNumber, Number(ageNumber));
 
-			// ageNumber;
-			// console.log(ageNumber, typeof ageNumber);			
-
-			// while (ageNumber < 0 ) {
-			// 		ageNumber = prompt('Ой! Что-то пошло не так, введи еще раз сколько тебе лет?');
-			// }
+			while (ageNumber < 0 || isNaN(Number(ageNumber)) || ageNumber == 0) {
+					ageNumber = prompt('Ой! Что-то пошло не так, введи еще раз сколько тебе лет?');
+					console.log(typeof ageNumber, Number(ageNumber));
+			}
 
 			if (ageNumber%10 === 0 || ageNumber%10 >= 5 || (ageNumber >= 11 && ageNumber <= 15)) {
 				ageText = ageNumber + ' лет';
@@ -19,10 +17,10 @@
 				ageText = ageNumber + ' год';
 			} else if (2 <= ageNumber%10 <= 4) {
 				ageText = ageNumber + ' года';
-			} 
+			}
 			alert("Ого! Тебе " + ageText);
 		</script>
 	</head>
-	<body>
+	<body> 
 	</body>
 </html>
