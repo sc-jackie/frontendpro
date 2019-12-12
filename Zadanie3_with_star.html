@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			var pyramidHeight = prompt('Насколько высокую хочешь пирамидку?');
+			var pyramidSymbol = prompt('Введи 1 символ из которого хочешь сделать пирамидку:');
+			var pyramidSymbolLoop = pyramidSymbol;
+			var pyramidLength = 2*pyramidHeight - 1;
+			var pyramidText = '';
+
+			for (var i = 1; i <= pyramidHeight; i++) {
+				var spaces = '';
+				for (var j = pyramidHeight - i; j > 0; j--) {
+					spaces += 'x';
+				}
+				pyramidText += spaces + pyramidSymbolLoop + spaces + '\n';
+				pyramidSymbolLoop += pyramidSymbol + pyramidSymbol;
+			}
+			
+			alert (pyramidText);
+
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>
