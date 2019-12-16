@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+
+
+			function printConsole(j, i){
+				return j+i;
+			}
+
+			function isFunction(functionToCheck) {
+				if (typeof functionToCheck === 'function') {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			console.log(typeof(printConsole));
+			console.log(isFunction(printConsole('j','i')));
+
+			// function minus(i, j){
+			// console.log(i-j);
+			// // return i - j;
+			// }
+			// console.log (typeof(minus));
+
+			function f (a = 2, b = 3, c) {
+				function sum (a, b) {
+				return a + b;
+				}
+				// console.log(typeof(c));
+				if (isFunction(c) === true) {
+					c;
+					return c;
+					} else {
+						return sum (a,b);
+						// return sum(a,b)	;
+					}
+				}
+
+
+			console.log(f(2, 3, printConsole('job', 1)));
+
+
+			// var pyramidHeight = prompt('Насколько высокую хочешь пирамидку?');
+			// var pyramidSymbol = prompt('Введи 1 символ из которого хочешь сделать пирамидку:');
+			// var pyramidText = '';
+
+			// function createPyramid(height, symbol){
+			// 	var symbolLoop = symbol;
+
+			// 	for (var i = 1; i <= height; i++) {
+			// 	pyramidText += symbolLoop + '\n';
+			// 	symbolLoop += symbol;
+			// 	console.log(pyramidText);
+			// 	}
+			// 	alert (pyramidText);
+			// }
+
+			// function createTree(height, symbol){
+			// 	var symbolLoop = symbol;
+			// 	for (var i = 1; i <= height; i++) {
+			// 	var spaces = '';
+			// 	for (var j = height - i; j > 0; j--) {
+			// 		spaces += ' ';
+			// 	}
+			// 	pyramidText += spaces + symbolLoop + spaces + '\n';
+			// 	symbolLoop += symbol + symbol;
+			// 	}
+			// 	alert (pyramidText);
+			// }
+
+						
+
+			// // createPyramid(pyramidHeight, pyramidSymbol);
+			// createTree(pyramidHeight, pyramidSymbol);
+
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>
