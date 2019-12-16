@@ -3,26 +3,30 @@
 	<head>
 		<meta charset="utf-8">
 		<script>
-			var ageNumber = prompt('Привет! Сколько тебе лет?', );
-			console.log(ageNumber, typeof ageNumber);
+			var to5 = [];
 
-			// ageNumber;
-			// console.log(ageNumber, typeof ageNumber);			
+			for (i = 101; i < 200; i++) {
+				if (i % 5 == 0) {
+					to5.push(i);
+				}
+			}
+			console.log(to5);
 
-			// while (ageNumber < 0 ) {
-			// 		ageNumber = prompt('Ой! Что-то пошло не так, введи еще раз сколько тебе лет?');
-			// }
 
-			if (ageNumber%10 === 0 || ageNumber%10 >= 5 || (ageNumber >= 11 && ageNumber <= 15)) {
-				ageText = ageNumber + ' лет';
-			} else if (ageNumber%10 === 1) {
-				ageText = ageNumber + ' год';
-			} else if (2 <= ageNumber%10 <= 4) {
-				ageText = ageNumber + ' года';
-			} 
-			alert("Ого! Тебе " + ageText);
+			var randomArray = ['кот', 345, 255, null, NaN, undefined, 35000, 21, 'пес'];
+			var numberArray = [];
+
+			for (i = 0; i < randomArray.length; i++) {
+				if (!isNaN(randomArray[i])){
+					numberArray.push(randomArray[i]);
+					console.log(numberArray);
+				} else if (isNaN(randomArray[i]) || randomArray[i] == null) {
+					continue;
+				}
+			}
+
 		</script>
 	</head>
 	<body>
 	</body>
-</html>
+</html> 

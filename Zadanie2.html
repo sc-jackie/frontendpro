@@ -6,12 +6,12 @@
 			var ageNumber = prompt('Привет! Сколько тебе лет?');
 			console.log(typeof ageNumber, Number(ageNumber));
 
-			while (ageNumber < 0 || isNaN(Number(ageNumber)) || ageNumber == 0) {
+			while (ageNumber < 0 || Number(ageNumber) !== Number(ageNumber) || ageNumber === 0) {
 					ageNumber = prompt('Ой! Что-то пошло не так, введи еще раз сколько тебе лет?');
 					console.log(typeof ageNumber, Number(ageNumber));
 			}
 
-			if (ageNumber%10 === 0 || ageNumber%10 >= 5 || (ageNumber >= 11 && ageNumber <= 15)) {
+			if (ageNumber%10 === 0 || ageNumber%10 >= 5 || (ageNumber >= 11 && ageNumber <= 15) || ageNumber%100 === 11) {
 				ageText = ageNumber + ' лет';
 			} else if (ageNumber%10 === 1) {
 				ageText = ageNumber + ' год';
