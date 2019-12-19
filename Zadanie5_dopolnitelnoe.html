@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			var userString = prompt('Введи любой текст:');
+			var userSymbols = prompt('Введите буквы, которые хотите удалить из текста (вводить через запятую');
+
+
+			// Проблемы: string обрезается, хотя я обрезаю removedString
+			// : убирается только одна буква l
+
+
+			function removeSymbols(string, symbolToRemove){
+				// string = string.split('');
+				// console.log(string, string.length);
+				// symbolsToRemove = symbolsToRemove.split(', ');
+				// console.log(symbolsToRemove, symbolsToRemove.length);
+
+				// var removedString = string;
+				// // console.log(string, string2);
+
+				// for (i = 0; i < symbolsToRemove.length; i++){
+				// 	console.log(symbolsToRemove[i]);
+				// 	for (j = 0; j < string.length; j++){
+				// 		if (symbolsToRemove[i] === string[j]){
+				// 			removedString.replace(symbolsToRemove[i], '');
+				// 		}
+				// 	}
+				// }
+				// // removedString = removedString.toString();
+				// // functionResult = removeSymbols(string2, ',');
+				// // console.log(typeof(functionResult));
+				// return removedString;
+				var remove = symbolToRemove;
+				console.log(remove);
+				var stringCut = string.replace(remove, '');
+				return stringCut;
+			}
+			
+			var result = removeSymbols(userString, userSymbols);
+			console.log(result);
+			alert(result);
+
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			function padString (string, lengthRes, char, isEnd) {
+				var stringLength = string.length;
+				if (stringLength <= lengthRes) {
+					var difference = lengthRes - stringLength;
+					var charSum = char;
+					for (i = 0; i < difference; i++){
+						charSum += char;
+					} 
+				}
+				return isEnd ? string + charSum : charSum + string;
+			}
+
+			var result = padString('Bob', 10, '*', true);
+			console.log(result);
+
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>

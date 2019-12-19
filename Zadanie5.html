@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			var number1 = prompt('Write your first number:');
+			var number2 = prompt('Write your second number:');
+			var operator = prompt('Write your sign:');
+			console.log(operator, operator === '+', operator !== '+');
+
+			// while (operator !== '-' || operator !== '+' || operator !== '*' || operator !== '/' || operator !== '**' || operator !== '%') {
+			// 	operator = prompt('Oops. Repeat your sign:');
+			// }
+
+
+
+			function getResult(par1, par2, action){
+				if (action === '+'){
+					var result = par1 + par2;
+					return result;
+				} else if (action === '-'){
+					var result = par1 - par2;
+					return result;
+				} else if (action === '*'){
+					var result = par1 * par2;
+					return result;
+				} else if (action === '/'){
+					var result = par1 / par2;
+					return result;
+				} else if (action === '**'){
+					var result = par1**par2;
+					return result;
+				} else if (action === '%'){
+					var result = par1%par2;
+					return result;
+				}
+			}
+
+			var res = getResult(number1, number2, operator);
+			console.log(res);
+
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>
